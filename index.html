@@ -9,15 +9,25 @@
   <body>
   <div class="container">
 
+    <!-- Section infos de mise au panier -->
+    <!-- Masquée par défaut jusqu'à ce qu'on choisisse un produit -->
     <h1 class="mb-4 mt-4">Amalthea</h1>
     <h2 class="mb-4">Video</h2>
-
     <div class="mb-4" id="buying-options" style="display: none">
       <button type="button" class="btn btn-primary">Ajouter au panier</button>
       <button type="button" class="btn btn-primary">Plus d'infos</button>
     </div>
 
-    <div class="mb-4" id="moments">
+    <div class="mb-4" id="options-select-skincare">
+      <h3 >Comment souhaitez-vous séléctionner votre soin ?</h3>
+      <button type="button" class="btn btn-primary" id="btn-choice-moment">Par moment de la journée</button>
+      <button type="button" class="btn btn-primary" id="btn-choice-skintype">Par type de peau</button>
+    </div>
+
+    <!-- Section choix du moment de la journée-->
+    <!-- Montrée par défaut -->
+    <div class="mb-4" id="moments" style="display: none">
+      <!-- Le titre de la section change si on a déjà choisit un moment au préalable -->
       <h3 id="init-moment-choice">Pour quel moment de la journée cherchez-vous un soin ?</h3>
       <h3 id="change-moment-choice" style="display: none">Souhaitez vous voir un autre soin ?</h3>
       <button type="button" class="btn btn-primary" id="morning">Matin</button>
@@ -26,15 +36,24 @@
     </div>
 
 
+    <!-- Section choix du produit-->
+    <!-- Masquée par défaut jusqu'à ce qu'on choisisse un moment de la journée -->
     <div class="mb-4" id="cream-options" style="display: none">
       <h3>Quel type de crème cherchez-vous ?</h3>
       <button type="button" class="btn btn-primary">Crème Hydratante Riche</button>
       <button type="button" class="btn btn-primary">Crème Hydratante</button>
       <button type="button" class="btn btn-primary">Crème Hydratante Légère</button>
     </div>
+
+    <div class="mb-4" id="skintypes" style="display: none">
+      <h3 id="init-skintype-choice">Quel est votre type de peau ?</h3>
+      <h3 id="change-skintype-choice" style="display: none">Souhaitez vous changer le type de peau sélectionné ?</h3>
+      <button type="button" class="btn btn-primary" id="cream-dry-skin">Peau très sèche à sèche</button>
+      <button type="button" class="btn btn-primary">Peau normale</button>
+      <button type="button" class="btn btn-primary">Peau mixte à grasse</button>
+    </div>
+
   </div>
-
-
     <script src="main.js"></script>
   </body>
 </html>
